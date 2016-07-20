@@ -18,5 +18,5 @@ date1=$((`date +%s` + $SECONDS));
 
 while [ "$date1" -gt `date +%s` ]; do
   echo -ne "$(date -u --date @$(($date1 - `date +%s` )) +%H:%M:%S)\r";
+  sleep 0.5
 done
-
